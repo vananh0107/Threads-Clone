@@ -1,4 +1,4 @@
-import { CreateOrganization, currentUser } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
 import Searchbar from '@/components/shared/Searchbar';
@@ -58,7 +58,6 @@ async function Page({
         pageNumber={searchParams?.page ? +searchParams.page : 1}
         isNext={result.isNext}
       />
-      <CreateOrganization />
     </>
   );
 }
